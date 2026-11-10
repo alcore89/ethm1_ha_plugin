@@ -1,0 +1,43 @@
+{
+  "title": "SATEL ETHM-1 Legacy",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to SATEL INTEGRA through a legacy ETHM-1",
+        "description": "Enable TCP/IP Integration on ETHM-1. Leave the integration key empty for clear-text communication, or enter the same key configured in DLOADX when Integration encryption is enabled.",
+        "data": {
+          "host": "ETHM-1 IP address / host",
+          "port": "Integration port",
+          "user_code": "INTEGRA user code",
+          "integration_key": "Integration encryption key (optional)",
+          "scan_interval": "Polling interval (seconds)",
+          "motion_hold_seconds": "Motion hold after violation (seconds; 0 = disabled)",
+          "motion_hold_zones": "PIR zones using motion hold (e.g. 1-8,10)"
+        }
+      },
+      "reconfigure": {
+        "title": "Configure SATEL ETHM-1 Legacy",
+        "description": "The encryption key must match the Integration encryption setting in ETHM-1. This version keeps the 0.1.x sensor/discovery logic unchanged.",
+        "data": {
+          "host": "ETHM-1 IP address / host",
+          "port": "Integration port",
+          "user_code": "INTEGRA user code",
+          "integration_key": "Integration encryption key (optional)",
+          "scan_interval": "Polling interval (seconds)",
+          "motion_hold_seconds": "Motion hold after violation (seconds; 0 = disabled)",
+          "motion_hold_zones": "PIR zones using motion hold (e.g. 1-8,10)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to ETHM-1 or read the panel. Check the address, port and encryption setting/key.",
+      "invalid_code": "The user code must contain only 1-16 digits.",
+      "invalid_key": "The integration key must contain at most 12 ASCII characters.",
+      "unknown": "Unexpected error. Check the Home Assistant log.",
+      "invalid_zones": "Enter zone numbers as a list/range, e.g. 1-8,10,12."
+    },
+    "abort": {
+      "already_configured": "This ETHM-1 is already configured."
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "title": "SATEL ETHM-1 Legacy",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Połącz z SATEL INTEGRA przez stary ETHM-1",
+        "description": "Włącz Integrację TCP/IP w ETHM-1. Klucz integracji zostaw pusty dla komunikacji jawnej albo wpisz identyczny klucz jak w DLOADX, gdy włączone jest Kodowanie integracji.",
+        "data": {
+          "host": "Adres IP / host ETHM-1",
+          "port": "Port integracji",
+          "user_code": "Kod użytkownika INTEGRY",
+          "integration_key": "Klucz szyfrowania integracji (opcjonalny)",
+          "scan_interval": "Interwał odpytywania (sekundy)",
+          "motion_hold_seconds": "Podtrzymanie ruchu po naruszeniu (sekundy; 0 = wyłączone)",
+          "motion_hold_zones": "Wejścia PIR z podtrzymaniem (np. 1-8,10)"
+        }
+      },
+      "reconfigure": {
+        "title": "Konfiguracja SATEL ETHM-1 Legacy",
+        "description": "Zmiana klucza wymaga zgodnego ustawienia Kodowanie integracji w ETHM-1. Ta wersja nie zmienia identyfikatorów ani logiki czujek z 0.1.x.",
+        "data": {
+          "host": "Adres IP / host ETHM-1",
+          "port": "Port integracji",
+          "user_code": "Kod użytkownika INTEGRY",
+          "integration_key": "Klucz szyfrowania integracji (opcjonalny)",
+          "scan_interval": "Interwał odpytywania (sekundy)",
+          "motion_hold_seconds": "Podtrzymanie ruchu po naruszeniu (sekundy; 0 = wyłączone)",
+          "motion_hold_zones": "Wejścia PIR z podtrzymaniem (np. 1-8,10)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Nie można połączyć się z ETHM-1 lub odczytać centrali. Sprawdź adres, port oraz ustawienie/klucz szyfrowania.",
+      "invalid_code": "Kod użytkownika musi składać się wyłącznie z 1-16 cyfr.",
+      "invalid_key": "Klucz integracji może mieć maksymalnie 12 znaków ASCII.",
+      "unknown": "Wystąpił nieoczekiwany błąd. Sprawdź log Home Assistanta.",
+      "invalid_zones": "Podaj numery wejść jako listę/range, np. 1-8,10,12."
+    },
+    "abort": {
+      "already_configured": "Ten ETHM-1 jest już skonfigurowany."
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "domain": "satel_ethm1_legacy",
+  "name": "SATEL ETHM-1 Legacy",
+  "version": "0.1.3",
+  "config_flow": true,
+  "integration_type": "hub",
+  "iot_class": "local_polling",
+  "requirements": []
+}
